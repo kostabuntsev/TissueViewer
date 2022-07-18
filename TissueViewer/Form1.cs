@@ -83,13 +83,58 @@ namespace TissueViewer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            path = textBox1.Text;
+            folderBrowserDialog1.ShowDialog();
+            path = folderBrowserDialog1.SelectedPath;
+            textBox1.Text = path;
             ListDirectory(treeView1, path);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                path = textBox1.Text;
+                ListDirectory(treeView1, path);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Can't Find Folder", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+                path = textBox1.Text;
+                //ListDirectory(treeView1, path);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+
+                if (e.KeyChar == (char)Keys.Return)
+                {
+                    ListDirectory(treeView1, path);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Can't Find Folder", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            richTextBox1.Font = fontDialog1.Font;
         }
     }
 }
