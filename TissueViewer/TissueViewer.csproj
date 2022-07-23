@@ -79,6 +79,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FSItem.cs" />
+    <Compile Include="Helpers\ConfigurationHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TreeNodeMetadata.cs" />

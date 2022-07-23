@@ -7,7 +7,7 @@ namespace TissueViewer
 {
     public partial class Form1 : Form
     {
-        public string path = Properties.Settings.Default.rootPath ?? @"C:\Users\Kosta\Desktop";
+        public string path = ConfigurationHelper.GetAppSetting("rootPath");
 
         public bool isDirectory(TreeNode treeNode)
         {
@@ -22,11 +22,13 @@ namespace TissueViewer
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             //webBrowser1.Size = webBrowser1.Document.Body.ScrollRectangle.Size;
             ListDirectory(treeView1, path);
-            MessageBox.Show(Properties.Settings.Default.myColor);
+            textBox1.Text = path;
         }
 
         private void ListDirectory(TreeView treeView, string path)
         {
+            if (String.IsNullOrWhiteSpace(path)) return;
+
             treeView.Nodes.Clear();
 
             var rootDrectoryInfo = new DirectoryInfo(path);
@@ -54,8 +56,6 @@ namespace TissueViewer
             }
 
             return directoryNode;
-
-            
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -79,7 +79,6 @@ namespace TissueViewer
                 String TreeNodeName = treeView1.SelectedNode.ToString().Replace("TreeNode: ", String.Empty);
                 //MessageBox.Show(path + "\\" + TreeNodeName);
                 System.Diagnostics.Process.Start(path + "\\" + TreeNodeName);
-
             }
         }
 
@@ -107,7 +106,6 @@ namespace TissueViewer
             catch (Exception)
             {
                 MessageBox.Show("Can't Find Folder", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
             }
         }
 
@@ -141,11 +139,7 @@ namespace TissueViewer
 
         private void SaveRootPath()
         {
-            ConfigurationManager.AppSettings.Set("rootPath", path);
-            Properties.Settings.Default.myColor = path;
-            Properties.Settings.Default.Save();
-            //System.Configuration.ConfigurationManager.AppSettings["rootPath"] = path;
-            //Properties.Settings.Default.Save();
+            ConfigurationHelper.SetAppSetting("rootPath", path);
         }
     }
 }
