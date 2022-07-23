@@ -140,9 +140,23 @@ namespace TissueViewer
             ConfigurationHelper.SetAppSetting("rootPath", path);
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void treeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            System.Diagnostics.Process.Start((treeView.SelectedNode.Tag as TreeNodeMetadata).FullName);
+        }
 
+
+        private void treeView_NodeMouseClick_1(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                this.treeView.SelectedNode = e.Node;
+            }
+        }
+
+        private void openExternallyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start((treeView.SelectedNode.Tag as TreeNodeMetadata).FullName);
         }
     }
 }
