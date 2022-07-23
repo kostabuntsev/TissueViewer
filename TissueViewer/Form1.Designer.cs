@@ -28,187 +28,183 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.Options = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.idk = new System.Windows.Forms.ToolStripMenuItem();
-            this.forFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.forFoldersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.Options.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.imageViewerRictureBox = new System.Windows.Forms.PictureBox();
+            this.openExternallyButton = new System.Windows.Forms.Button();
+            this.pathTextBox = new System.Windows.Forms.TextBox();
+            this.treeView = new System.Windows.Forms.TreeView();
+            this.browseButton = new System.Windows.Forms.Button();
+            this.rightTabControl = new System.Windows.Forms.TabControl();
+            this.imageViewerTabPage = new System.Windows.Forms.TabPage();
+            this.textEditorTabPage = new System.Windows.Forms.TabPage();
+            this.changeFontButton = new System.Windows.Forms.Button();
+            this.textEditorRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.browserTabPage = new System.Windows.Forms.TabPage();
+            this.webBrowser = new System.Windows.Forms.WebBrowser();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.textEditorFontDialog = new System.Windows.Forms.FontDialog();
+            this.leftTabControl = new System.Windows.Forms.TabControl();
+            this.treeTabPage = new System.Windows.Forms.TabPage();
+            this.settingsTabPage = new System.Windows.Forms.TabPage();
+            ((System.ComponentModel.ISupportInitialize)(this.imageViewerRictureBox)).BeginInit();
+            this.rightTabControl.SuspendLayout();
+            this.imageViewerTabPage.SuspendLayout();
+            this.textEditorTabPage.SuspendLayout();
+            this.browserTabPage.SuspendLayout();
+            this.leftTabControl.SuspendLayout();
+            this.treeTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // imageViewerRictureBox
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(this.imageViewerRictureBox, "imageViewerRictureBox");
+            this.imageViewerRictureBox.Name = "imageViewerRictureBox";
+            this.imageViewerRictureBox.TabStop = false;
             // 
-            // button1
+            // openExternallyButton
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.openExternallyButton, "openExternallyButton");
+            this.openExternallyButton.Name = "openExternallyButton";
+            this.openExternallyButton.UseVisualStyleBackColor = true;
+            this.openExternallyButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // pathTextBox
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            resources.ApplyResources(this.pathTextBox, "pathTextBox");
+            this.pathTextBox.Name = "pathTextBox";
+            this.pathTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.pathTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.pathTextBox.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // treeView1
+            // treeView
             // 
-            this.treeView1.CheckBoxes = true;
-            resources.ApplyResources(this.treeView1, "treeView1");
-            this.treeView1.HideSelection = false;
-            this.treeView1.Name = "treeView1";
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.treeView.CheckBoxes = true;
+            resources.ApplyResources(this.treeView, "treeView");
+            this.treeView.HideSelection = false;
+            this.treeView.Name = "treeView";
+            this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
-            // button2
+            // browseButton
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            resources.ApplyResources(this.browseButton, "browseButton");
+            this.browseButton.Name = "browseButton";
+            this.browseButton.UseVisualStyleBackColor = true;
+            this.browseButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Options
+            // rightTabControl
             // 
-            this.Options.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.idk});
-            this.Options.Name = "Options";
-            resources.ApplyResources(this.Options, "Options");
+            this.rightTabControl.Controls.Add(this.imageViewerTabPage);
+            this.rightTabControl.Controls.Add(this.textEditorTabPage);
+            this.rightTabControl.Controls.Add(this.browserTabPage);
+            resources.ApplyResources(this.rightTabControl, "rightTabControl");
+            this.rightTabControl.Multiline = true;
+            this.rightTabControl.Name = "rightTabControl";
+            this.rightTabControl.SelectedIndex = 0;
             // 
-            // idk
+            // imageViewerTabPage
             // 
-            this.idk.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.forFilesToolStripMenuItem,
-            this.forFoldersToolStripMenuItem});
-            this.idk.Name = "idk";
-            resources.ApplyResources(this.idk, "idk");
+            this.imageViewerTabPage.Controls.Add(this.imageViewerRictureBox);
+            resources.ApplyResources(this.imageViewerTabPage, "imageViewerTabPage");
+            this.imageViewerTabPage.Name = "imageViewerTabPage";
+            this.imageViewerTabPage.UseVisualStyleBackColor = true;
             // 
-            // forFilesToolStripMenuItem
+            // textEditorTabPage
             // 
-            this.forFilesToolStripMenuItem.Name = "forFilesToolStripMenuItem";
-            resources.ApplyResources(this.forFilesToolStripMenuItem, "forFilesToolStripMenuItem");
+            this.textEditorTabPage.Controls.Add(this.changeFontButton);
+            this.textEditorTabPage.Controls.Add(this.textEditorRichTextBox);
+            resources.ApplyResources(this.textEditorTabPage, "textEditorTabPage");
+            this.textEditorTabPage.Name = "textEditorTabPage";
+            this.textEditorTabPage.UseVisualStyleBackColor = true;
             // 
-            // forFoldersToolStripMenuItem
+            // changeFontButton
             // 
-            this.forFoldersToolStripMenuItem.Name = "forFoldersToolStripMenuItem";
-            resources.ApplyResources(this.forFoldersToolStripMenuItem, "forFoldersToolStripMenuItem");
+            resources.ApplyResources(this.changeFontButton, "changeFontButton");
+            this.changeFontButton.Name = "changeFontButton";
+            this.changeFontButton.UseVisualStyleBackColor = true;
+            this.changeFontButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // tabControl1
+            // textEditorRichTextBox
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
+            resources.ApplyResources(this.textEditorRichTextBox, "textEditorRichTextBox");
+            this.textEditorRichTextBox.Name = "textEditorRichTextBox";
             // 
-            // tabPage1
+            // browserTabPage
             // 
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.browserTabPage.Controls.Add(this.webBrowser);
+            resources.ApplyResources(this.browserTabPage, "browserTabPage");
+            this.browserTabPage.Name = "browserTabPage";
+            this.browserTabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // webBrowser
             // 
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.richTextBox1);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.webBrowser, "webBrowser");
+            this.webBrowser.Name = "webBrowser";
+            this.webBrowser.Url = new System.Uri("", System.UriKind.Relative);
             // 
-            // richTextBox1
+            // leftTabControl
             // 
-            resources.ApplyResources(this.richTextBox1, "richTextBox1");
-            this.richTextBox1.Name = "richTextBox1";
+            this.leftTabControl.Controls.Add(this.treeTabPage);
+            this.leftTabControl.Controls.Add(this.settingsTabPage);
+            resources.ApplyResources(this.leftTabControl, "leftTabControl");
+            this.leftTabControl.Name = "leftTabControl";
+            this.leftTabControl.SelectedIndex = 0;
             // 
-            // tabPage3
+            // treeTabPage
             // 
-            this.tabPage3.Controls.Add(this.webBrowser1);
-            resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.treeTabPage.Controls.Add(this.openExternallyButton);
+            this.treeTabPage.Controls.Add(this.treeView);
+            this.treeTabPage.Controls.Add(this.pathTextBox);
+            this.treeTabPage.Controls.Add(this.browseButton);
+            resources.ApplyResources(this.treeTabPage, "treeTabPage");
+            this.treeTabPage.Name = "treeTabPage";
+            this.treeTabPage.UseVisualStyleBackColor = true;
             // 
-            // webBrowser1
+            // settingsTabPage
             // 
-            resources.ApplyResources(this.webBrowser1, "webBrowser1");
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
-            // 
-            // button3
-            // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            resources.ApplyResources(this.settingsTabPage, "settingsTabPage");
+            this.settingsTabPage.Name = "settingsTabPage";
+            this.settingsTabPage.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.leftTabControl);
+            this.Controls.Add(this.rightTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.Options.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imageViewerRictureBox)).EndInit();
+            this.rightTabControl.ResumeLayout(false);
+            this.imageViewerTabPage.ResumeLayout(false);
+            this.textEditorTabPage.ResumeLayout(false);
+            this.browserTabPage.ResumeLayout(false);
+            this.leftTabControl.ResumeLayout(false);
+            this.treeTabPage.ResumeLayout(false);
+            this.treeTabPage.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ContextMenuStrip Options;
-        private System.Windows.Forms.ToolStripMenuItem idk;
-        private System.Windows.Forms.ToolStripMenuItem forFilesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem forFoldersToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox imageViewerRictureBox;
+        private System.Windows.Forms.Button openExternallyButton;
+        private System.Windows.Forms.TextBox pathTextBox;
+        private System.Windows.Forms.TreeView treeView;
+        private System.Windows.Forms.Button browseButton;
+        private System.Windows.Forms.TabControl rightTabControl;
+        private System.Windows.Forms.TabPage imageViewerTabPage;
+        private System.Windows.Forms.TabPage textEditorTabPage;
+        private System.Windows.Forms.RichTextBox textEditorRichTextBox;
+        private System.Windows.Forms.WebBrowser webBrowser;
+        private System.Windows.Forms.TabPage browserTabPage;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+        private System.Windows.Forms.FontDialog textEditorFontDialog;
+        private System.Windows.Forms.Button changeFontButton;
+        private System.Windows.Forms.TabControl leftTabControl;
+        private System.Windows.Forms.TabPage treeTabPage;
+        private System.Windows.Forms.TabPage settingsTabPage;
     }
 }
 

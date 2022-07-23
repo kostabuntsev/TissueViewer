@@ -19,10 +19,10 @@ namespace TissueViewer
             InitializeComponent();
 
             //load Folder structure
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            imageViewerRictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             //webBrowser1.Size = webBrowser1.Document.Body.ScrollRectangle.Size;
-            ListDirectory(treeView1, path);
-            textBox1.Text = path;
+            ListDirectory(treeView, path);
+            pathTextBox.Text = path;
         }
 
         private void ListDirectory(TreeView treeView, string path)
@@ -60,23 +60,23 @@ namespace TissueViewer
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            if (!isDirectory(treeView1.SelectedNode))
+            if (!isDirectory(treeView.SelectedNode))
             {
-                TreeNode selectedNode = treeView1.SelectedNode;
+                TreeNode selectedNode = treeView.SelectedNode;
                 var metadata = (selectedNode.Tag as TreeNodeMetadata);
                 string filePath = metadata.FullName;
                 Uri uri = new Uri(filePath);
-                webBrowser1.Url = uri;
-                pictureBox1.ImageLocation = filePath;
-                richTextBox1.Text = File.ReadAllText(filePath);
+                webBrowser.Url = uri;
+                imageViewerRictureBox.ImageLocation = filePath;
+                textEditorRichTextBox.Text = File.ReadAllText(filePath);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!isDirectory(treeView1.SelectedNode))
+            if (!isDirectory(treeView.SelectedNode))
             {
-                String TreeNodeName = treeView1.SelectedNode.ToString().Replace("TreeNode: ", String.Empty);
+                String TreeNodeName = treeView.SelectedNode.ToString().Replace("TreeNode: ", String.Empty);
                 //MessageBox.Show(path + "\\" + TreeNodeName);
                 System.Diagnostics.Process.Start(path + "\\" + TreeNodeName);
             }
@@ -84,10 +84,10 @@ namespace TissueViewer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            folderBrowserDialog1.ShowDialog();
-            path = folderBrowserDialog1.SelectedPath;
-            textBox1.Text = path;
-            ListDirectory(treeView1, path);
+            folderBrowserDialog.ShowDialog();
+            path = folderBrowserDialog.SelectedPath;
+            pathTextBox.Text = path;
+            ListDirectory(treeView, path);
             SaveRootPath();
         }
 
@@ -100,8 +100,8 @@ namespace TissueViewer
         {
             try
             {
-                path = textBox1.Text;
-                ListDirectory(treeView1, path);
+                path = pathTextBox.Text;
+                ListDirectory(treeView, path);
             }
             catch (Exception)
             {
@@ -111,7 +111,7 @@ namespace TissueViewer
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-                path = textBox1.Text;
+                path = pathTextBox.Text;
                 //ListDirectory(treeView1, path);
         }
 
@@ -121,7 +121,7 @@ namespace TissueViewer
             {
                 if (e.KeyChar == (char)Keys.Return)
                 {
-                    ListDirectory(treeView1, path);
+                    ListDirectory(treeView, path);
                     SaveRootPath();
                 }
             }
@@ -133,13 +133,18 @@ namespace TissueViewer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            fontDialog1.ShowDialog();
-            richTextBox1.Font = fontDialog1.Font;
+            textEditorFontDialog.ShowDialog();
+            textEditorRichTextBox.Font = textEditorFontDialog.Font;
         }
 
         private void SaveRootPath()
         {
             ConfigurationHelper.SetAppSetting("rootPath", path);
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
