@@ -78,8 +78,8 @@
             // 
             // treeView
             // 
-            this.treeView.CheckBoxes = true;
             resources.ApplyResources(this.treeView, "treeView");
+            this.treeView.CheckBoxes = true;
             this.treeView.HideSelection = false;
             this.treeView.Name = "treeView";
             this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -93,10 +93,10 @@
             // 
             // rightTabControl
             // 
+            resources.ApplyResources(this.rightTabControl, "rightTabControl");
             this.rightTabControl.Controls.Add(this.imageViewerTabPage);
             this.rightTabControl.Controls.Add(this.textEditorTabPage);
             this.rightTabControl.Controls.Add(this.browserTabPage);
-            resources.ApplyResources(this.rightTabControl, "rightTabControl");
             this.rightTabControl.Multiline = true;
             this.rightTabControl.Name = "rightTabControl";
             this.rightTabControl.SelectedIndex = 0;
@@ -143,9 +143,9 @@
             // 
             // leftTabControl
             // 
+            resources.ApplyResources(this.leftTabControl, "leftTabControl");
             this.leftTabControl.Controls.Add(this.treeTabPage);
             this.leftTabControl.Controls.Add(this.settingsTabPage);
-            resources.ApplyResources(this.leftTabControl, "leftTabControl");
             this.leftTabControl.Name = "leftTabControl";
             this.leftTabControl.SelectedIndex = 0;
             // 
@@ -171,8 +171,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.leftTabControl);
             this.Controls.Add(this.rightTabControl);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imageViewerRictureBox)).EndInit();

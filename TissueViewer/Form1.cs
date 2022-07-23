@@ -76,9 +76,7 @@ namespace TissueViewer
         {
             if (!isDirectory(treeView.SelectedNode))
             {
-                String TreeNodeName = treeView.SelectedNode.ToString().Replace("TreeNode: ", String.Empty);
-                //MessageBox.Show(path + "\\" + TreeNodeName);
-                System.Diagnostics.Process.Start(path + "\\" + TreeNodeName);
+                System.Diagnostics.Process.Start((treeView.SelectedNode.Tag as TreeNodeMetadata).FullName);
             }
         }
 
