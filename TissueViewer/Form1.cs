@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.Configuration;
 
 namespace TissueViewer
 {
     public partial class Form1 : Form
     {
-        public string path = @"C:\Users\Kosta\Desktop";
+        public string path = Properties.Settings.Default.rootPath ?? @"C:\Users\Kosta\Desktop";
 
         public bool isDirectory(TreeNode treeNode)
         {
@@ -21,6 +22,7 @@ namespace TissueViewer
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             //webBrowser1.Size = webBrowser1.Document.Body.ScrollRectangle.Size;
             ListDirectory(treeView1, path);
+            MessageBox.Show(Properties.Settings.Default.myColor);
         }
 
         private void ListDirectory(TreeView treeView, string path)
@@ -87,6 +89,7 @@ namespace TissueViewer
             path = folderBrowserDialog1.SelectedPath;
             textBox1.Text = path;
             ListDirectory(treeView1, path);
+            SaveRootPath();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -118,16 +121,15 @@ namespace TissueViewer
         {
             try
             {
-
                 if (e.KeyChar == (char)Keys.Return)
                 {
                     ListDirectory(treeView1, path);
+                    SaveRootPath();
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Can't Find Folder", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -135,6 +137,15 @@ namespace TissueViewer
         {
             fontDialog1.ShowDialog();
             richTextBox1.Font = fontDialog1.Font;
+        }
+
+        private void SaveRootPath()
+        {
+            ConfigurationManager.AppSettings.Set("rootPath", path);
+            Properties.Settings.Default.myColor = path;
+            Properties.Settings.Default.Save();
+            //System.Configuration.ConfigurationManager.AppSettings["rootPath"] = path;
+            //Properties.Settings.Default.Save();
         }
     }
 }
