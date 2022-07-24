@@ -139,6 +139,7 @@
             // 
             this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
+            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
             // pathTextBox
             // 

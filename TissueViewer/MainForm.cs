@@ -223,5 +223,10 @@ namespace TissueViewer
                 MessageBox.Show("Can't Find Directory", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void propertiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Shell32Helper.ShowFileProperties((treeView.SelectedNode.Tag as TreeNodeMetadata).FullName);
+        }
     }
 }
