@@ -37,9 +37,14 @@
             this.treeView = new System.Windows.Forms.TreeView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openExternallyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pathTextBox = new System.Windows.Forms.TextBox();
             this.browseButton = new System.Windows.Forms.Button();
             this.settingsTabPage = new System.Windows.Forms.TabPage();
+            this.startupPathLabel = new System.Windows.Forms.Label();
+            this.startupPathTextBox = new System.Windows.Forms.TextBox();
+            this.restorePathCheckBox = new System.Windows.Forms.CheckBox();
+            this.pathSettingsLabel = new System.Windows.Forms.Label();
             this.rightTabControl = new System.Windows.Forms.TabControl();
             this.imageViewerTabPage = new System.Windows.Forms.TabPage();
             this.imageViewerRictureBox = new System.Windows.Forms.PictureBox();
@@ -50,7 +55,6 @@
             this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.textEditorFontDialog = new System.Windows.Forms.FontDialog();
-            this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMainForm)).BeginInit();
             this.splitContainerMainForm.Panel1.SuspendLayout();
             this.splitContainerMainForm.Panel2.SuspendLayout();
@@ -58,6 +62,7 @@
             this.leftTabControl.SuspendLayout();
             this.treeTabPage.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.settingsTabPage.SuspendLayout();
             this.rightTabControl.SuspendLayout();
             this.imageViewerTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageViewerRictureBox)).BeginInit();
@@ -130,6 +135,11 @@
             resources.ApplyResources(this.openExternallyToolStripMenuItem, "openExternallyToolStripMenuItem");
             this.openExternallyToolStripMenuItem.Click += new System.EventHandler(this.openExternallyToolStripMenuItem_Click);
             // 
+            // propertiesToolStripMenuItem
+            // 
+            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
+            resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
+            // 
             // pathTextBox
             // 
             resources.ApplyResources(this.pathTextBox, "pathTextBox");
@@ -147,9 +157,39 @@
             // 
             // settingsTabPage
             // 
+            this.settingsTabPage.Controls.Add(this.startupPathLabel);
+            this.settingsTabPage.Controls.Add(this.startupPathTextBox);
+            this.settingsTabPage.Controls.Add(this.restorePathCheckBox);
+            this.settingsTabPage.Controls.Add(this.pathSettingsLabel);
             resources.ApplyResources(this.settingsTabPage, "settingsTabPage");
             this.settingsTabPage.Name = "settingsTabPage";
             this.settingsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // startupPathLabel
+            // 
+            resources.ApplyResources(this.startupPathLabel, "startupPathLabel");
+            this.startupPathLabel.Name = "startupPathLabel";
+            // 
+            // startupPathTextBox
+            // 
+            resources.ApplyResources(this.startupPathTextBox, "startupPathTextBox");
+            this.startupPathTextBox.Name = "startupPathTextBox";
+            this.startupPathTextBox.TextChanged += new System.EventHandler(this.startupPathTextBox_TextChanged);
+            this.startupPathTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.startupPathTextBox_KeyPress);
+            // 
+            // restorePathCheckBox
+            // 
+            resources.ApplyResources(this.restorePathCheckBox, "restorePathCheckBox");
+            this.restorePathCheckBox.Checked = true;
+            this.restorePathCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.restorePathCheckBox.Name = "restorePathCheckBox";
+            this.restorePathCheckBox.UseVisualStyleBackColor = true;
+            this.restorePathCheckBox.CheckedChanged += new System.EventHandler(this.rememberPathCheckBox_CheckedChanged);
+            // 
+            // pathSettingsLabel
+            // 
+            resources.ApplyResources(this.pathSettingsLabel, "pathSettingsLabel");
+            this.pathSettingsLabel.Name = "pathSettingsLabel";
             // 
             // rightTabControl
             // 
@@ -207,11 +247,6 @@
             this.webBrowser.Name = "webBrowser";
             this.webBrowser.Url = new System.Uri("", System.UriKind.Relative);
             // 
-            // propertiesToolStripMenuItem
-            // 
-            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
-            resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -227,6 +262,8 @@
             this.treeTabPage.ResumeLayout(false);
             this.treeTabPage.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.settingsTabPage.ResumeLayout(false);
+            this.settingsTabPage.PerformLayout();
             this.rightTabControl.ResumeLayout(false);
             this.imageViewerTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageViewerRictureBox)).EndInit();
@@ -258,6 +295,10 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem openExternallyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
+        private System.Windows.Forms.CheckBox restorePathCheckBox;
+        private System.Windows.Forms.Label pathSettingsLabel;
+        private System.Windows.Forms.Label startupPathLabel;
+        private System.Windows.Forms.TextBox startupPathTextBox;
     }
 }
 

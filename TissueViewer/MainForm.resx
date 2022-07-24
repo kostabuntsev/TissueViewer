@@ -294,6 +294,120 @@
   <data name="&gt;&gt;treeTabPage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="startupPathLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="startupPathLabel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="startupPathLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="startupPathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 52</value>
+  </data>
+  <data name="startupPathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 17</value>
+  </data>
+  <data name="startupPathLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="startupPathLabel.Text" xml:space="preserve">
+    <value>Startup Path</value>
+  </data>
+  <data name="&gt;&gt;startupPathLabel.Name" xml:space="preserve">
+    <value>startupPathLabel</value>
+  </data>
+  <data name="&gt;&gt;startupPathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startupPathLabel.Parent" xml:space="preserve">
+    <value>settingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;startupPathLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="startupPathTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="startupPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 71</value>
+  </data>
+  <data name="startupPathTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>386, 23</value>
+  </data>
+  <data name="startupPathTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;startupPathTextBox.Name" xml:space="preserve">
+    <value>startupPathTextBox</value>
+  </data>
+  <data name="&gt;&gt;startupPathTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startupPathTextBox.Parent" xml:space="preserve">
+    <value>settingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;startupPathTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="restorePathCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="restorePathCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 28</value>
+  </data>
+  <data name="restorePathCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 21</value>
+  </data>
+  <data name="restorePathCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="restorePathCheckBox.Text" xml:space="preserve">
+    <value>Restore Path On Start-Up</value>
+  </data>
+  <data name="&gt;&gt;restorePathCheckBox.Name" xml:space="preserve">
+    <value>restorePathCheckBox</value>
+  </data>
+  <data name="&gt;&gt;restorePathCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;restorePathCheckBox.Parent" xml:space="preserve">
+    <value>settingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;restorePathCheckBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pathSettingsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pathSettingsLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei, 11.25pt, style=Bold</value>
+  </data>
+  <data name="pathSettingsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 4</value>
+  </data>
+  <data name="pathSettingsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 19</value>
+  </data>
+  <data name="pathSettingsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pathSettingsLabel.Text" xml:space="preserve">
+    <value>Path Settings</value>
+  </data>
+  <data name="&gt;&gt;pathSettingsLabel.Name" xml:space="preserve">
+    <value>pathSettingsLabel</value>
+  </data>
+  <data name="&gt;&gt;pathSettingsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pathSettingsLabel.Parent" xml:space="preserve">
+    <value>settingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;pathSettingsLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="settingsTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 26</value>
   </data>
@@ -2429,6 +2543,12 @@
   <data name="&gt;&gt;openExternallyToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;propertiesToolStripMenuItem.Name" xml:space="preserve">
+    <value>propertiesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;propertiesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;folderBrowserDialog.Name" xml:space="preserve">
     <value>folderBrowserDialog</value>
   </data>
@@ -2440,12 +2560,6 @@
   </data>
   <data name="&gt;&gt;textEditorFontDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.FontDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;propertiesToolStripMenuItem.Name" xml:space="preserve">
-    <value>propertiesToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;propertiesToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

@@ -7,7 +7,9 @@ namespace TissueViewer
 {
     public partial class MainForm : Form
     {
+
         public string path = ConfigurationHelper.GetAppSetting("rootPath");
+
 
         public bool isDirectory(TreeNode treeNode)
         {
@@ -20,9 +22,22 @@ namespace TissueViewer
 
             //load Folder structure
             imageViewerRictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-            //webBrowser1.Size = webBrowser1.Document.Body.ScrollRectangle.Size;
-            ListDirectory(treeView, path);
+
+            if(ConfigurationHelper.GetAppSetting("restorePath") == "1")
+            {
+                ListDirectory(treeView, path);
+                restorePathCheckBox.Checked = true;
+            }
+            else
+            {
+                ListDirectory(treeView, ConfigurationHelper.GetAppSetting("startupPath"));
+                restorePathCheckBox.Checked = false;
+                path = ConfigurationHelper.GetAppSetting("startupPath");
+            }
+
             pathTextBox.Text = path;
+
+            startupPathTextBox.Text = ConfigurationHelper.GetAppSetting("startupPath");
         }
 
         private void ListDirectory(TreeView treeView, string path)
@@ -36,7 +51,7 @@ namespace TissueViewer
             treeView.Nodes.Add(CreateDirectoryNode(rootDrectoryInfo));
         }
 
-        
+
 
         private static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
         {
@@ -86,7 +101,11 @@ namespace TissueViewer
             path = folderBrowserDialog.SelectedPath;
             pathTextBox.Text = path;
             ListDirectory(treeView, path);
-            SaveRootPath();
+
+            if(ConfigurationHelper.GetAppSetting("restorePath") == "1")
+            {
+                SaveRootPath();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -109,8 +128,8 @@ namespace TissueViewer
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-                path = pathTextBox.Text;
-                //ListDirectory(treeView1, path);
+            path = pathTextBox.Text;
+            //ListDirectory(treeView1, path);
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -120,7 +139,11 @@ namespace TissueViewer
                 if (e.KeyChar == (char)Keys.Return)
                 {
                     ListDirectory(treeView, path);
-                    SaveRootPath();
+
+                    if(ConfigurationHelper.GetAppSetting("restorePath") == "1")
+                    {
+                        SaveRootPath();
+                    }
                 }
             }
             catch (Exception)
@@ -157,6 +180,48 @@ namespace TissueViewer
         private void openExternallyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start((treeView.SelectedNode.Tag as TreeNodeMetadata).FullName);
+        }
+
+        private void rememberPathCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (restorePathCheckBox.Checked)
+            {
+                ConfigurationHelper.SetAppSetting("restorePath", "1");
+                startupPathTextBox.Enabled = false;
+                startupPathLabel.Enabled = false;
+                ConfigurationHelper.SetAppSetting("startupPath", string.Empty);
+            }
+            else
+            {
+                ConfigurationHelper.SetAppSetting("restorePath", "0");
+                startupPathTextBox.Enabled = true;
+                startupPathLabel.Enabled = true;
+            }
+        }
+
+        private void startupPathTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ConfigurationHelper.SetAppSetting("startupPath", startupPathTextBox.Text);
+        }
+
+        private void startupPathTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (e.KeyChar == (char)Keys.Return)
+                {
+                    ConfigurationHelper.SetAppSetting("startupPath", startupPathTextBox.Text);
+
+                    if (ConfigurationHelper.GetAppSetting("restorePath") == "1")
+                    {
+                        SaveRootPath();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Can't Find Directory", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
