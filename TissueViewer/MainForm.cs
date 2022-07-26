@@ -39,6 +39,8 @@ namespace TissueViewer
             pathTextBox.Text = path;
 
             startupPathTextBox.Text = ConfigurationHelper.GetAppSetting("startupPath");
+
+            path = @"c:\users\kosta\desktop";
         }
 
         private void ListDirectory(TreeView treeView, string path)
@@ -61,14 +63,40 @@ namespace TissueViewer
             //directoryNode.Tag 
             foreach (var directory in directoryInfo.GetDirectories())
             {
-                directoryNode.Nodes.Add(CreateDirectoryNode(directory));
+                var createdDir = CreateDirectoryNode(directory);
+
+                directoryNode.Nodes.Add(createdDir);
+
+                createdDir.ImageIndex = 0;
+                createdDir.SelectedImageIndex = createdDir.ImageIndex;
             }
 
             foreach (FileInfo file in directoryInfo.GetFiles())
             {
                 var fileNode = new TreeNode(file.Name);
                 fileNode.Tag = new TreeNodeMetadata(FSItem.File, file.FullName, file.Extension);
-                directoryNode.Nodes.Add(fileNode);
+                directoryNode.Nodes.Add(fileNode); 
+
+                if(file.Extension == ".txt")
+                {
+                    fileNode.ImageIndex = 1;
+                }
+                else if(file.Extension == ".png" || file.Extension == ".jpg" || file.Extension == "jepg")
+                {
+                    fileNode.ImageIndex = 2;
+                }
+                else if (file.Extension == ".gif" || file.Extension == ".mp4" || file.Extension == ".mkv")
+                {
+                    fileNode.ImageIndex = 3;
+                }
+                else if(file.Extension == ".pdn") //Special icon for Paint.net because I like Paint.net
+                {
+                    fileNode.ImageIndex = 4;
+                }
+
+                fileNode.SelectedImageIndex = fileNode.ImageIndex;
+
+
                 foreach (AlternateDataStreamInfo ads in file.ListAlternateDataStreams())
                 {
                     var adsNode = new TreeNode($":{ads.Name}");

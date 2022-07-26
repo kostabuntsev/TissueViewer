@@ -55,6 +55,7 @@
             this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.textEditorFontDialog = new System.Windows.Forms.FontDialog();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMainForm)).BeginInit();
             this.splitContainerMainForm.Panel1.SuspendLayout();
             this.splitContainerMainForm.Panel2.SuspendLayout();
@@ -115,6 +116,7 @@
             resources.ApplyResources(this.treeView, "treeView");
             this.treeView.ContextMenuStrip = this.contextMenuStrip1;
             this.treeView.HideSelection = false;
+            this.treeView.ImageList = this.imageList1;
             this.treeView.Name = "treeView";
             this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.treeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseClick_1);
@@ -247,6 +249,16 @@
             this.webBrowser.Name = "webBrowser";
             this.webBrowser.Url = new System.Uri("", System.UriKind.Relative);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-folder-100.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-document-100.png");
+            this.imageList1.Images.SetKeyName(2, "icons8-image-100.png");
+            this.imageList1.Images.SetKeyName(3, "icons8-video-100.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-paint-net-100.png");
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -299,6 +311,7 @@
         private System.Windows.Forms.Label pathSettingsLabel;
         private System.Windows.Forms.Label startupPathLabel;
         private System.Windows.Forms.TextBox startupPathTextBox;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
