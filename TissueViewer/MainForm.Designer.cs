@@ -113,7 +113,6 @@
             // treeView
             // 
             resources.ApplyResources(this.treeView, "treeView");
-            this.treeView.CheckBoxes = true;
             this.treeView.ContextMenuStrip = this.contextMenuStrip1;
             this.treeView.HideSelection = false;
             this.treeView.Name = "treeView";

@@ -3,6 +3,7 @@
     public enum FSItem
     {
         File,
-        Directory
+        Directory,
+        AlternateFileStream
     }
 }

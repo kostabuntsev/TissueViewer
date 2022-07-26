@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
-using System.Configuration;
+using Trinet.Core.IO.Ntfs;
+using System.Collections.Generic;
 
 namespace TissueViewer
 {
@@ -19,7 +20,7 @@ namespace TissueViewer
         public MainForm()
         {
             InitializeComponent();
-
+            
             //load Folder structure
             imageViewerRictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -63,11 +64,17 @@ namespace TissueViewer
                 directoryNode.Nodes.Add(CreateDirectoryNode(directory));
             }
 
-            foreach (var file in directoryInfo.GetFiles())
+            foreach (FileInfo file in directoryInfo.GetFiles())
             {
                 var fileNode = new TreeNode(file.Name);
                 fileNode.Tag = new TreeNodeMetadata(FSItem.File, file.FullName, file.Extension);
                 directoryNode.Nodes.Add(fileNode);
+                foreach (AlternateDataStreamInfo ads in file.ListAlternateDataStreams())
+                {
+                    var adsNode = new TreeNode($":{ads.Name}");
+                    adsNode.Tag = new TreeNodeMetadata(FSItem.AlternateFileStream, file.FullName, file.Extension) { StreamName = ads.Name };
+                    fileNode.Nodes.Add(adsNode);
+                }
             }
 
             return directoryNode;
@@ -83,7 +90,20 @@ namespace TissueViewer
                 Uri uri = new Uri(filePath);
                 webBrowser.Url = uri;
                 imageViewerRictureBox.ImageLocation = filePath;
-                textEditorRichTextBox.Text = File.ReadAllText(filePath);
+                if (metadata.FSItem == FSItem.File)
+                {
+                    textEditorRichTextBox.Text = File.ReadAllText(filePath);
+                }
+                else if (metadata.FSItem == FSItem.AlternateFileStream)
+                {
+                    var fileInfo = new FileInfo(metadata.FullName);
+                    AlternateDataStreamInfo streamInfo = fileInfo.GetAlternateDataStream(metadata.StreamName, FileMode.Open);
+                    using (TextReader reader = streamInfo.OpenText())
+                    {
+                        textEditorRichTextBox.Text = reader.ReadToEnd();
+                    }
+                }
+
             }
         }
 

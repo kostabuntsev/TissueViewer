@@ -5,6 +5,7 @@
 		public FSItem FSItem { get; set; }
 		public string FullName { get; set; }
         public string FileExtension { get; set; }
+        public string StreamName { get; set; }
 
 		public TreeNodeMetadata(FSItem fSItem, string fullName, string fileExtension)
         {

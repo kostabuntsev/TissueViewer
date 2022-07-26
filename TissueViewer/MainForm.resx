@@ -166,19 +166,19 @@
     <value>445, 17</value>
   </metadata>
   <data name="openExternallyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>157, 22</value>
   </data>
   <data name="openExternallyToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Externally</value>
   </data>
   <data name="propertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>157, 22</value>
   </data>
   <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>Properties</value>
   </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 70</value>
+    <value>158, 48</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
     <value>contextMenuStrip1</value>
