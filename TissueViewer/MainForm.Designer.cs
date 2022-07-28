@@ -38,6 +38,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openExternallyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pathTextBox = new System.Windows.Forms.TextBox();
             this.browseButton = new System.Windows.Forms.Button();
             this.settingsTabPage = new System.Windows.Forms.TabPage();
@@ -55,7 +56,9 @@
             this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.textEditorFontDialog = new System.Windows.Forms.FontDialog();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMainForm)).BeginInit();
             this.splitContainerMainForm.Panel1.SuspendLayout();
             this.splitContainerMainForm.Panel2.SuspendLayout();
@@ -142,6 +145,16 @@
             resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
             this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-folder-100.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-document-100.png");
+            this.imageList1.Images.SetKeyName(2, "icons8-image-100.png");
+            this.imageList1.Images.SetKeyName(3, "icons8-video-100.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-paint-net-100.png");
+            // 
             // pathTextBox
             // 
             resources.ApplyResources(this.pathTextBox, "pathTextBox");
@@ -218,6 +231,8 @@
             // 
             // textEditorTabPage
             // 
+            this.textEditorTabPage.Controls.Add(this.button2);
+            this.textEditorTabPage.Controls.Add(this.button1);
             this.textEditorTabPage.Controls.Add(this.changeFontButton);
             this.textEditorTabPage.Controls.Add(this.textEditorRichTextBox);
             resources.ApplyResources(this.textEditorTabPage, "textEditorTabPage");
@@ -249,15 +264,19 @@
             this.webBrowser.Name = "webBrowser";
             this.webBrowser.Url = new System.Uri("", System.UriKind.Relative);
             // 
-            // imageList1
+            // button1
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-folder-100.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-document-100.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-image-100.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-video-100.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-paint-net-100.png");
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // MainForm
             // 
@@ -312,6 +331,9 @@
         private System.Windows.Forms.Label startupPathLabel;
         private System.Windows.Forms.TextBox startupPathTextBox;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

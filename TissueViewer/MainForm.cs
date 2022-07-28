@@ -276,5 +276,16 @@ namespace TissueViewer
         {
             Shell32Helper.ShowFileProperties((treeView.SelectedNode.Tag as TreeNodeMetadata).FullName);
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            textEditorRichTextBox.ForeColor = colorDialog1.Color;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            textEditorRichTextBox.Clear();
+        }
     }
 }
