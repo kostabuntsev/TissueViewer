@@ -11,6 +11,7 @@ namespace TissueViewer
 
         public string path = ConfigurationHelper.GetAppSetting("rootPath");
 
+        public int fileCount, folderCount;
 
         public bool isDirectory(TreeNode treeNode)
         {
@@ -39,8 +40,6 @@ namespace TissueViewer
             pathTextBox.Text = path;
 
             startupPathTextBox.Text = ConfigurationHelper.GetAppSetting("startupPath");
-
-            path = @"c:\users\kosta\desktop";
         }
 
         private void ListDirectory(TreeView treeView, string path)
@@ -48,15 +47,18 @@ namespace TissueViewer
             if (String.IsNullOrWhiteSpace(path)) return;
 
             treeView.Nodes.Clear();
+            folderCount = 0;
+            fileCount = 0;
 
             var rootDrectoryInfo = new DirectoryInfo(path);
 
             treeView.Nodes.Add(CreateDirectoryNode(rootDrectoryInfo));
+
         }
 
 
 
-        private static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
+        private TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
         {
             var directoryNode = new TreeNode(directoryInfo.Name);
             directoryNode.Tag = new TreeNodeMetadata(FSItem.Directory, directoryInfo.FullName, null);
@@ -66,6 +68,8 @@ namespace TissueViewer
                 var createdDir = CreateDirectoryNode(directory);
 
                 directoryNode.Nodes.Add(createdDir);
+                folderCount++;
+                folderCountLabel.Text = folderCount.ToString() + " Folders";
 
                 createdDir.ImageIndex = 0;
                 createdDir.SelectedImageIndex = createdDir.ImageIndex;
@@ -75,7 +79,9 @@ namespace TissueViewer
             {
                 var fileNode = new TreeNode(file.Name);
                 fileNode.Tag = new TreeNodeMetadata(FSItem.File, file.FullName, file.Extension);
-                directoryNode.Nodes.Add(fileNode); 
+                directoryNode.Nodes.Add(fileNode);
+                fileCount++;
+                fileCountLabel.Text = fileCount.ToString() + " Files";
 
                 if(file.Extension == ".txt")
                 {
@@ -89,7 +95,7 @@ namespace TissueViewer
                 {
                     fileNode.ImageIndex = 3;
                 }
-                else if(file.Extension == ".pdn") //Special icon for Paint.net because I like Paint.net
+                else if(file.Extension == ".exe")
                 {
                     fileNode.ImageIndex = 4;
                 }
@@ -174,21 +180,16 @@ namespace TissueViewer
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            path = pathTextBox.Text;
-            //ListDirectory(treeView1, path);
-        }
-
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {
                 if (e.KeyChar == (char)Keys.Return)
                 {
+                    path = pathTextBox.Text;
                     ListDirectory(treeView, path);
 
-                    if(ConfigurationHelper.GetAppSetting("restorePath") == "1")
+                    if (ConfigurationHelper.GetAppSetting("restorePath") == "1")
                     {
                         SaveRootPath();
                     }
@@ -213,7 +214,8 @@ namespace TissueViewer
 
         private void treeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            System.Diagnostics.Process.Start((treeView.SelectedNode.Tag as TreeNodeMetadata).FullName);
+            if (treeView.SelectedNode != null)
+                System.Diagnostics.Process.Start((treeView.SelectedNode.Tag as TreeNodeMetadata).FullName);
         }
 
 

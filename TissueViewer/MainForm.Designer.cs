@@ -33,15 +33,20 @@
             this.splitContainerMainForm = new System.Windows.Forms.SplitContainer();
             this.leftTabControl = new System.Windows.Forms.TabControl();
             this.treeTabPage = new System.Windows.Forms.TabPage();
+            this.folderCountLabel = new System.Windows.Forms.Label();
+            this.fileCountLabel = new System.Windows.Forms.Label();
             this.openExternallyButton = new System.Windows.Forms.Button();
             this.treeView = new System.Windows.Forms.TreeView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openExternallyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.treeViewImageList = new System.Windows.Forms.ImageList(this.components);
             this.pathTextBox = new System.Windows.Forms.TextBox();
             this.browseButton = new System.Windows.Forms.Button();
             this.settingsTabPage = new System.Windows.Forms.TabPage();
+            this.iconSetLabel = new System.Windows.Forms.Label();
+            this.iconSetComboBox = new System.Windows.Forms.ComboBox();
+            this.iconSettingsLabel = new System.Windows.Forms.Label();
             this.startupPathLabel = new System.Windows.Forms.Label();
             this.startupPathTextBox = new System.Windows.Forms.TextBox();
             this.restorePathCheckBox = new System.Windows.Forms.CheckBox();
@@ -50,6 +55,8 @@
             this.imageViewerTabPage = new System.Windows.Forms.TabPage();
             this.imageViewerRictureBox = new System.Windows.Forms.PictureBox();
             this.textEditorTabPage = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.changeFontButton = new System.Windows.Forms.Button();
             this.textEditorRichTextBox = new System.Windows.Forms.RichTextBox();
             this.browserTabPage = new System.Windows.Forms.TabPage();
@@ -57,8 +64,6 @@
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.textEditorFontDialog = new System.Windows.Forms.FontDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMainForm)).BeginInit();
             this.splitContainerMainForm.Panel1.SuspendLayout();
             this.splitContainerMainForm.Panel2.SuspendLayout();
@@ -99,6 +104,8 @@
             // 
             // treeTabPage
             // 
+            this.treeTabPage.Controls.Add(this.folderCountLabel);
+            this.treeTabPage.Controls.Add(this.fileCountLabel);
             this.treeTabPage.Controls.Add(this.openExternallyButton);
             this.treeTabPage.Controls.Add(this.treeView);
             this.treeTabPage.Controls.Add(this.pathTextBox);
@@ -106,6 +113,16 @@
             resources.ApplyResources(this.treeTabPage, "treeTabPage");
             this.treeTabPage.Name = "treeTabPage";
             this.treeTabPage.UseVisualStyleBackColor = true;
+            // 
+            // folderCountLabel
+            // 
+            resources.ApplyResources(this.folderCountLabel, "folderCountLabel");
+            this.folderCountLabel.Name = "folderCountLabel";
+            // 
+            // fileCountLabel
+            // 
+            resources.ApplyResources(this.fileCountLabel, "fileCountLabel");
+            this.fileCountLabel.Name = "fileCountLabel";
             // 
             // openExternallyButton
             // 
@@ -119,7 +136,7 @@
             resources.ApplyResources(this.treeView, "treeView");
             this.treeView.ContextMenuStrip = this.contextMenuStrip1;
             this.treeView.HideSelection = false;
-            this.treeView.ImageList = this.imageList1;
+            this.treeView.ImageList = this.treeViewImageList;
             this.treeView.Name = "treeView";
             this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.treeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseClick_1);
@@ -145,21 +162,20 @@
             resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
             this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
-            // imageList1
+            // treeViewImageList
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-folder-100.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-document-100.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-image-100.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-video-100.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-paint-net-100.png");
+            this.treeViewImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("treeViewImageList.ImageStream")));
+            this.treeViewImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.treeViewImageList.Images.SetKeyName(0, "icons8-folder-100.png");
+            this.treeViewImageList.Images.SetKeyName(1, "icons8-document-100.png");
+            this.treeViewImageList.Images.SetKeyName(2, "icons8-image-100.png");
+            this.treeViewImageList.Images.SetKeyName(3, "icons8-video-100.png");
+            this.treeViewImageList.Images.SetKeyName(4, "icons8-paint-net-100.png");
             // 
             // pathTextBox
             // 
             resources.ApplyResources(this.pathTextBox, "pathTextBox");
             this.pathTextBox.Name = "pathTextBox";
-            this.pathTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.pathTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.pathTextBox.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
@@ -172,6 +188,9 @@
             // 
             // settingsTabPage
             // 
+            this.settingsTabPage.Controls.Add(this.iconSetLabel);
+            this.settingsTabPage.Controls.Add(this.iconSetComboBox);
+            this.settingsTabPage.Controls.Add(this.iconSettingsLabel);
             this.settingsTabPage.Controls.Add(this.startupPathLabel);
             this.settingsTabPage.Controls.Add(this.startupPathTextBox);
             this.settingsTabPage.Controls.Add(this.restorePathCheckBox);
@@ -179,6 +198,31 @@
             resources.ApplyResources(this.settingsTabPage, "settingsTabPage");
             this.settingsTabPage.Name = "settingsTabPage";
             this.settingsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // iconSetLabel
+            // 
+            resources.ApplyResources(this.iconSetLabel, "iconSetLabel");
+            this.iconSetLabel.Name = "iconSetLabel";
+            // 
+            // iconSetComboBox
+            // 
+            resources.ApplyResources(this.iconSetComboBox, "iconSetComboBox");
+            this.iconSetComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.iconSetComboBox.FormattingEnabled = true;
+            this.iconSetComboBox.Items.AddRange(new object[] {
+            resources.GetString("iconSetComboBox.Items"),
+            resources.GetString("iconSetComboBox.Items1"),
+            resources.GetString("iconSetComboBox.Items2"),
+            resources.GetString("iconSetComboBox.Items3"),
+            resources.GetString("iconSetComboBox.Items4"),
+            resources.GetString("iconSetComboBox.Items5"),
+            resources.GetString("iconSetComboBox.Items6")});
+            this.iconSetComboBox.Name = "iconSetComboBox";
+            // 
+            // iconSettingsLabel
+            // 
+            resources.ApplyResources(this.iconSettingsLabel, "iconSettingsLabel");
+            this.iconSettingsLabel.Name = "iconSettingsLabel";
             // 
             // startupPathLabel
             // 
@@ -239,6 +283,20 @@
             this.textEditorTabPage.Name = "textEditorTabPage";
             this.textEditorTabPage.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // changeFontButton
             // 
             resources.ApplyResources(this.changeFontButton, "changeFontButton");
@@ -262,21 +320,8 @@
             // 
             resources.ApplyResources(this.webBrowser, "webBrowser");
             this.webBrowser.Name = "webBrowser";
+            this.webBrowser.ScriptErrorsSuppressed = true;
             this.webBrowser.Url = new System.Uri("", System.UriKind.Relative);
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // MainForm
             // 
@@ -330,10 +375,15 @@
         private System.Windows.Forms.Label pathSettingsLabel;
         private System.Windows.Forms.Label startupPathLabel;
         private System.Windows.Forms.TextBox startupPathTextBox;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList treeViewImageList;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label iconSetLabel;
+        private System.Windows.Forms.ComboBox iconSetComboBox;
+        private System.Windows.Forms.Label iconSettingsLabel;
+        private System.Windows.Forms.Label folderCountLabel;
+        private System.Windows.Forms.Label fileCountLabel;
     }
 }
 

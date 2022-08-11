@@ -129,6 +129,66 @@
   <data name="splitContainerMainForm.Panel1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="folderCountLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="folderCountLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="folderCountLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-2, 681</value>
+  </data>
+  <data name="folderCountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 17</value>
+  </data>
+  <data name="folderCountLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="folderCountLabel.Text" xml:space="preserve">
+    <value>100 Folders</value>
+  </data>
+  <data name="&gt;&gt;folderCountLabel.Name" xml:space="preserve">
+    <value>folderCountLabel</value>
+  </data>
+  <data name="&gt;&gt;folderCountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;folderCountLabel.Parent" xml:space="preserve">
+    <value>treeTabPage</value>
+  </data>
+  <data name="&gt;&gt;folderCountLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="fileCountLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="fileCountLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fileCountLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-2, 664</value>
+  </data>
+  <data name="fileCountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 17</value>
+  </data>
+  <data name="fileCountLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="fileCountLabel.Text" xml:space="preserve">
+    <value>100 Files</value>
+  </data>
+  <data name="&gt;&gt;fileCountLabel.Name" xml:space="preserve">
+    <value>fileCountLabel</value>
+  </data>
+  <data name="&gt;&gt;fileCountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileCountLabel.Parent" xml:space="preserve">
+    <value>treeTabPage</value>
+  </data>
+  <data name="&gt;&gt;fileCountLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="openExternallyButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -136,7 +196,7 @@
     <value>Microsoft YaHei, 8.25pt</value>
   </data>
   <data name="openExternallyButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 665</value>
+    <value>78, 665</value>
   </data>
   <data name="openExternallyButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 30</value>
@@ -157,7 +217,7 @@
     <value>treeTabPage</value>
   </data>
   <data name="&gt;&gt;openExternallyButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="treeView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -192,15 +252,15 @@
   <data name="treeView.ImageIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="treeViewImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>600, 17</value>
   </metadata>
-  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="treeViewImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACA
-        CwAAAk1TRnQBSQFMAgEBBQEAARABAAEQAQABFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBBQEAATABAAEwAQABFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABUAMAASgDAAEBAQABCAUAAYABDBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -274,7 +334,7 @@
     <value>treeTabPage</value>
   </data>
   <data name="&gt;&gt;treeView.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="pathTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -301,7 +361,7 @@
     <value>treeTabPage</value>
   </data>
   <data name="&gt;&gt;pathTextBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="browseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -331,7 +391,7 @@
     <value>treeTabPage</value>
   </data>
   <data name="&gt;&gt;browseButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="treeTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 26</value>
@@ -359,6 +419,117 @@
   </data>
   <data name="&gt;&gt;treeTabPage.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="iconSetLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="iconSetLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="iconSetLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 136</value>
+  </data>
+  <data name="iconSetLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 17</value>
+  </data>
+  <data name="iconSetLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="iconSetLabel.Text" xml:space="preserve">
+    <value>Icon Set</value>
+  </data>
+  <data name="&gt;&gt;iconSetLabel.Name" xml:space="preserve">
+    <value>iconSetLabel</value>
+  </data>
+  <data name="&gt;&gt;iconSetLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;iconSetLabel.Parent" xml:space="preserve">
+    <value>settingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;iconSetLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="iconSetComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="iconSetComboBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei, 9pt</value>
+  </data>
+  <data name="iconSetComboBox.Items" xml:space="preserve">
+    <value>Windows 10 (Recommended)</value>
+  </data>
+  <data name="iconSetComboBox.Items1" xml:space="preserve">
+    <value>Windows 7</value>
+  </data>
+  <data name="iconSetComboBox.Items2" xml:space="preserve">
+    <value>Windows XP</value>
+  </data>
+  <data name="iconSetComboBox.Items3" xml:space="preserve">
+    <value>Windows 98</value>
+  </data>
+  <data name="iconSetComboBox.Items4" xml:space="preserve">
+    <value>Ubuntu 20.04</value>
+  </data>
+  <data name="iconSetComboBox.Items5" xml:space="preserve">
+    <value>Mac 12.5</value>
+  </data>
+  <data name="iconSetComboBox.Items6" xml:space="preserve">
+    <value>Icons8 (https://icons8.com/)</value>
+  </data>
+  <data name="iconSetComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 167</value>
+  </data>
+  <data name="iconSetComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 25</value>
+  </data>
+  <data name="iconSetComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;iconSetComboBox.Name" xml:space="preserve">
+    <value>iconSetComboBox</value>
+  </data>
+  <data name="&gt;&gt;iconSetComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;iconSetComboBox.Parent" xml:space="preserve">
+    <value>settingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;iconSetComboBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="iconSettingsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="iconSettingsLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei, 11.25pt, style=Bold</value>
+  </data>
+  <data name="iconSettingsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="iconSettingsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 112</value>
+  </data>
+  <data name="iconSettingsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 19</value>
+  </data>
+  <data name="iconSettingsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="iconSettingsLabel.Text" xml:space="preserve">
+    <value>Icon Settings</value>
+  </data>
+  <data name="&gt;&gt;iconSettingsLabel.Name" xml:space="preserve">
+    <value>iconSettingsLabel</value>
+  </data>
+  <data name="&gt;&gt;iconSettingsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;iconSettingsLabel.Parent" xml:space="preserve">
+    <value>settingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;iconSettingsLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="startupPathLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -391,7 +562,10 @@
     <value>settingsTabPage</value>
   </data>
   <data name="&gt;&gt;startupPathLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
+  </data>
+  <data name="startupPathTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
   </data>
   <data name="startupPathTextBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -415,7 +589,7 @@
     <value>settingsTabPage</value>
   </data>
   <data name="&gt;&gt;startupPathTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="restorePathCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -442,7 +616,7 @@
     <value>settingsTabPage</value>
   </data>
   <data name="&gt;&gt;restorePathCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="pathSettingsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -472,7 +646,7 @@
     <value>settingsTabPage</value>
   </data>
   <data name="&gt;&gt;pathSettingsLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="settingsTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 26</value>
@@ -2669,10 +2843,10 @@
   <data name="&gt;&gt;propertiesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
-    <value>imageList1</value>
+  <data name="&gt;&gt;treeViewImageList.Name" xml:space="preserve">
+    <value>treeViewImageList</value>
   </data>
-  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
+  <data name="&gt;&gt;treeViewImageList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;folderBrowserDialog.Name" xml:space="preserve">
