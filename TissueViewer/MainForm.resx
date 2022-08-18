@@ -189,36 +189,6 @@
   <data name="&gt;&gt;fileCountLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="openExternallyButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="openExternallyButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 8.25pt</value>
-  </data>
-  <data name="openExternallyButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 665</value>
-  </data>
-  <data name="openExternallyButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 30</value>
-  </data>
-  <data name="openExternallyButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="openExternallyButton.Text" xml:space="preserve">
-    <value>Open Externally</value>
-  </data>
-  <data name="&gt;&gt;openExternallyButton.Name" xml:space="preserve">
-    <value>openExternallyButton</value>
-  </data>
-  <data name="&gt;&gt;openExternallyButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;openExternallyButton.Parent" xml:space="preserve">
-    <value>treeTabPage</value>
-  </data>
-  <data name="&gt;&gt;openExternallyButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="treeView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -260,7 +230,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACA
-        CwAAAk1TRnQBSQFMAgEBBQEAATABAAEwAQABFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBBQEAATgBAAE4AQABFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABUAMAASgDAAEBAQABCAUAAYABDBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -334,7 +304,7 @@
     <value>treeTabPage</value>
   </data>
   <data name="&gt;&gt;treeView.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="pathTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -361,7 +331,7 @@
     <value>treeTabPage</value>
   </data>
   <data name="&gt;&gt;pathTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="browseButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -391,7 +361,7 @@
     <value>treeTabPage</value>
   </data>
   <data name="&gt;&gt;browseButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="treeTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 26</value>

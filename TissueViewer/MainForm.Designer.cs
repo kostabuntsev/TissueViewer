@@ -35,7 +35,6 @@
             this.treeTabPage = new System.Windows.Forms.TabPage();
             this.folderCountLabel = new System.Windows.Forms.Label();
             this.fileCountLabel = new System.Windows.Forms.Label();
-            this.openExternallyButton = new System.Windows.Forms.Button();
             this.treeView = new System.Windows.Forms.TreeView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openExternallyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,7 +105,6 @@
             // 
             this.treeTabPage.Controls.Add(this.folderCountLabel);
             this.treeTabPage.Controls.Add(this.fileCountLabel);
-            this.treeTabPage.Controls.Add(this.openExternallyButton);
             this.treeTabPage.Controls.Add(this.treeView);
             this.treeTabPage.Controls.Add(this.pathTextBox);
             this.treeTabPage.Controls.Add(this.browseButton);
@@ -123,13 +121,6 @@
             // 
             resources.ApplyResources(this.fileCountLabel, "fileCountLabel");
             this.fileCountLabel.Name = "fileCountLabel";
-            // 
-            // openExternallyButton
-            // 
-            resources.ApplyResources(this.openExternallyButton, "openExternallyButton");
-            this.openExternallyButton.Name = "openExternallyButton";
-            this.openExternallyButton.UseVisualStyleBackColor = true;
-            this.openExternallyButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // treeView
             // 
@@ -351,7 +342,6 @@
 
         #endregion
         private System.Windows.Forms.PictureBox imageViewerRictureBox;
-        private System.Windows.Forms.Button openExternallyButton;
         private System.Windows.Forms.TextBox pathTextBox;
         private System.Windows.Forms.TreeView treeView;
         private System.Windows.Forms.Button browseButton;
