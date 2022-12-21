@@ -227,9 +227,6 @@ namespace TissueViewer
         {
             if (!isDirectory(treeView.SelectedNode))
             {
-                openExternallyButton.Enabled = true;
-
-
                 TreeNode selectedNode = treeView.SelectedNode;
                 var metadata = (selectedNode.Tag as TreeNodeMetadata);
                 string filePath = metadata.FullName;
@@ -249,10 +246,6 @@ namespace TissueViewer
                         textEditorRichTextBox.Text = reader.ReadToEnd();
                     }
                 }
-            }
-            else
-            {
-                openExternallyButton.Enabled = false;
             }
         }
 
