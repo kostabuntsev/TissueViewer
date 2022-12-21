@@ -139,13 +139,13 @@
     <value>-2, 681</value>
   </data>
   <data name="folderCountLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 17</value>
+    <value>110, 17</value>
   </data>
   <data name="folderCountLabel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="folderCountLabel.Text" xml:space="preserve">
-    <value>100 Folders</value>
+    <value>0 Folders Loaded</value>
   </data>
   <data name="&gt;&gt;folderCountLabel.Name" xml:space="preserve">
     <value>folderCountLabel</value>
@@ -169,13 +169,13 @@
     <value>-2, 664</value>
   </data>
   <data name="fileCountLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 17</value>
+    <value>92, 17</value>
   </data>
   <data name="fileCountLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="fileCountLabel.Text" xml:space="preserve">
-    <value>100 Files</value>
+    <value>0 Files Loaded</value>
   </data>
   <data name="&gt;&gt;fileCountLabel.Name" xml:space="preserve">
     <value>fileCountLabel</value>
@@ -192,11 +192,14 @@
   <data name="openExternallyButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
+  <data name="openExternallyButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="openExternallyButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei, 8.25pt</value>
   </data>
   <data name="openExternallyButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 665</value>
+    <value>124, 665</value>
   </data>
   <data name="openExternallyButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 30</value>
@@ -250,7 +253,7 @@
     <value>Microsoft YaHei, 11.25pt</value>
   </data>
   <data name="treeView.ImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="treeViewImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>600, 17</value>
@@ -259,8 +262,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACA
-        CwAAAk1TRnQBSQFMAgEBBQEAATABAAEwAQABFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACo
+        DwAAAk1TRnQBSQFMAgEBBgEAAVgBAAFYAQABFAEAARQBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABUAMAASgDAAEBAQABCAUAAYABDBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -288,35 +291,52 @@
         AZkBzAEAAf8BmQH/AQAB/wHMAgAB/wHMATMBAAH/AcwBZgEAAf8BzAGZAQAB/wLMAQAB/wHMAf8BAAL/
         ATMBAAHMAf8BZgEAAv8BmQEAAv8BzAEAAmYB/wEAAWYB/wFmAQABZgL/AQAB/wJmAQAB/wFmAf8BAAL/
         AWYBAAEhAQABpQEAA18BAAN3AQADhgEAA5YBAAPLAQADsgEAA9cBAAPdAQAD4wEAA+oBAAPxAQAD+AEA
-        AfAB+wH/AQABpAKgAQADgAMAAf8CAAH/AwAC/wEAAf8DAAH/AQAB/wEAAv8CAAP/VQAN80MAAvMBBwHw
-        CfNDAAPzAbwB8QIHBvNDAAPzAQcD/wEHBfNDAAEJA6wB9AL/AaYBigGsAqYB80MAAQkFrAJBAoYBpgH0
-        AfNDAAG7BqwBRwFBAWcBGQH0AfNDAAG7AaYBGQOsAQkBpgG8AUEB4wEZAfNDAAG7A/QBrAX0AUEBagHz
-        QwABGQr0AkFDAAEZCvQB3AJBQgAB8gEZA/QBGQPcAQkC3AHzAb0BQUEAAfIC3AH0CNwB80MAAfIL3AHz
-        QwAB8gvcAfNDAAHyC9wB80MADfP/AEgADdxDAA3cBgAPshgAARoPWQYADdwGAA6yAbMEABGtAwARWQUA
-        DdwGAA2yArMEAAGtAQAB9AGtAgABrQG0AQACrQEAAfQBrQIAAa0DABFZBQAD3AWtAdUE3AYADLIB1AKz
-        BAABrQG0Ac8BrQK0Aq0BtAKtAbQBzwGtArQBrQMAEVkFAA3cBgALswLUAbMB2wQAEa0DABFZBQAD3Aez
-        A9wGAAqzAdoC1ALbBAAHrQHcCa0DABFZBQAD3AWtAdUE3AYAAdoIswLaAdQD2wQAB60C3AHbB60DABFZ
-        BQAN3AYAAtsGswPaBNsEAAetBNwGrQMAEVkFAAPcB60D3AYAA9sE1AjbBAAHrQLcAdsHrQMAEVkFAA3c
-        BgAE2wLUCdsEAAetAdwJrQMAEVkFAA3cBgAJ2wLDBNsEABGtAwARWQUADdwGAAnbAsMB8wPbBAARrQMA
-        ATIPWQYACNwBGQP0AdwGAAnbAsME2wQAAa0BAAH0Aa0CAAGtAbQBAAKtAQAB9AGtAgABrQMABzIPAAjc
-        ARkC9AHcBwAP2wQAAa0BtAHPAa0CtAKtAbQCrQG0Ac8BrQK0Aa0ZAAjcARkB9AHcCAAP2y4ACNwBGQHc
-        zgABQgFNAT4HAAE+AwABKAMAAVADAAEoAwABAQEAAQEFAAHgAQEWAAP/AQAC/wHwCQAB8AEAAXAJAAHw
-        AQABcAkAAfABAAFwCQAB8AEAAXAJAAHwAQABcAkAAfABAAFwCQAB8AEAAXAJAAHwAQABcAkAAfABAAFw
-        CQAB8AEAAXAJAAHwAQABMAkAAfABAAEQCQAB8AEAAXAJAAHwAQABcAkAAfABAAFwCQAB8AEAAXAJAAHw
-        AQABcAkAAv8B8AkAAv8B8AkACv8CAAP/AQABBwX/AgAD/wEAAQcB4AEAAT8C/wIAAcABAAE/AQABBwHg
-        AQABPAEAAQECAAHAAQABHwEAAQcB4AEAAT0BMgFNAgABwAEAAR8BAAEHAeABAAE8AQABAQIAAcABAAEf
-        AQABBwHgAQABPAEAAQECAAHAAQABHwEAAQcB4AEAATwBAAEBAgABwAEAAR8BAAEHAeABAAE8AQABAQIA
-        AcABAAEfAQABBwHgAQABPAEAAQECAAHAAQABHwEAAQcB4AEAATwBAAEBAgABwAEAAR8BAAEHAeABAAE8
-        AQABAQIAAcABAAEfAQABBwHgAQABPAEAAQECAAHAAQABHwEAAQcB4AEAATwBAAEBAgABwAEAAT8BAAEH
-        AeABAAE9ATIBTQIAAcABfwH/AQABDwHgAQABPAEAAQECAAP/AQABHwHgAQABPwL/AgAD/wEAAT8F/wIA
-        Cv8CAAr/AgAL
+        AfAB+wH/AQABpAKgAQADgAMAAf8CAAH/AwAC/wEAAf8DAAH/AQAB/wEAAv8CAAP/UwAB9AH3AewGFAMV
+        ARQBEQLvQAAC9AG8ArUBkQK0AVgBMAE3AVEBWAERAf8B70AAAfQB7QFtAe8BmQEcArQBTAFEAUwBSwGN
+        AREB7QHvAwAB9BHyKwAB9AHwAfcF1AHPAWcBFAGuAdQBEQHxAe8DAAG8A/IE/wn0AfcrAAH0AQcBkgqz
+        AREB8AHvAwABvAPyAf8GtAG7BfQB9ysAAfQB9wHsB60BiwESAa0BEQLvAwABvAPyAf8GrAGzA/IC9AH3
+        KwAC9AG8B60CDgGLAREB/wHvAwABvAHxAfcBBwH/BqwBswHzAvIC9AH3KwAB9AHtAW0GrQFoAUoBRQFK
+        AREB7QHvAwABvAPyAf8GrAGzAbwDBwG8AfcrAAH0AfAB9wWtAWYBTAFJAT8BTAERAfEB7wMAAbwB8AGS
+        AQcB/wasAbMB7wOSAe8B9ysAAfQBBwGSA0sBRQFJAUgBDQEPAkgBEQHwAe8DAAG8A/IB/wasAbMBvAMH
+        AbwB9ysAAfQB9wHsAXUBbwFoAUYBEgFOARUBIgFJAXABEQLvAwABvAHxAfcBBwH/BqwBswHzA/IB8wH3
+        KwAC9AG8Ao0BtQGMAc8BUQEwATEBMAGRAREB/wHvAwABvAPyAf8BrAGyBKwBswHzA/IB8wH3KwAB9AHt
+        AW0CtQK0AZEBUgEDAVIBSwFzAREB7QHvAwABvAHxAQcBvAH/BqwBswG8AwcBvAH3KwAB9AHwAvcBmQF5
+        AbQBkQFZAQMBNwFRAVgBEQHxAe8DAAG8EP8B9ysAAfQBBwGSA7QBrQHPAW8BRAJFAa4BEQHwAe8DAAG8
+        De8B8AEHAe8BkisAAfQB9wHsB60BiwKtAREC7wMAAfER7ysAAvQBvAqtAREB/wHvQAAB/wHwAQcL7wHw
+        AfHhAAG8CwcB8wYAAfYNOAEbBgABvAkHA+8B8hoAAewL8gHsAf8FAAH2AXoM5QEbBgABvAH/C/QB8hoA
+        Ae0L/wH3AfQFAAH2AXoM5QEbBgABvAH0CvIB9AHyBAAB9BHyBAAB7QT/Ab0BlAX/AfcB9AUAAfYBegzl
+        ARsGAAG8Af8K9AH/AfIEAAG8B/8J9AH3BAAB7QT/ARoBvQX/AfcB9AUAAfYBegzlARsGAAG8AfQD8gfx
+        Af8B8gQAAbwB/wHvDPEBBwH0AfcEAAHtBP8BkwGaBf8B9wH0BQAB9gF6DOUBGwYAAbwB/wr0Af8B8gQA
+        AbwB/wHvAfAEtAG1ArsBvAPwAbwB9AH3BAAB7QT/ARYBbwH0BP8BkgH0BQAB9gF6DOUBGwYAAfAB8wrx
+        Af8B8gQAAbwB/wHvAQcDiwKRAfcDuwG8AQkBvAH0AfcEAAHtBf8BkwFGAfQD/wGSAfQFAAH2AXoM5QEb
+        BgAB8AH/CvQB/wHzBAABvAH/Au8CFAETARIBbAFtAXICkQG7ArwB9AH3BAAB7Qb/AW8BFgP/AZIB9AUA
+        AfYBegvlAnoGAAHwAfMK8AH/AfMEAAG8Af8B7wEHAmwBcgGRARkG9AG8AfQB9wQAAewD/wEbAv8BFgFv
+        A/8BkgH0BQAB9gF6CuUBWQI4AZoFAAHwAf8K9AH/AfMEAAG8Af8B7wHwAZICuwgZAbwB9AH3BAAB7AP/
+        AZMBRgFvAUYBvQP/AZIB9AUAAfYBegrlAVkCOAF6BQAB8AHzCvEB/wHzBAABvAH/Ae8BGQEJAhkCCQbc
+        AbwB9AH3BAAB7AT/AhoB9AHvAQcB8gH/AZIB9AUAAfYBegrlAVkCOAF6BQAB8AH/CvQB/wHzBAABvAH/
+        Ae8BGQvVAbwB9AH3BAAB7Af/AeoB7AFtAeoBQwH0BQAB9gF6CuUBWQI4AXoFAAHwAfQK8gH/AfMEAAG8
+        Af8B7wEZCwkBvAH/AfcEAAHsB/8B7AH3AQcB7wFtAf8FAAH2AXoK5QFZAjgBegUAAfAB/wr0Af8B8wQA
+        AbwB/wHvDAcB7wH/AfcEAAHsB/8BvAHsAQcBEwHzBgAB9gF6CuUBWQI4AXoFAAHxAfQH8wH0AvABvAHz
+        BAABvA3vAfACBwGSBAAB7Aj/AeoB7AEHBwAB9gF6CuUBWQI4AXoFAAHxAf8I9AHyAfEB8AH/BAAB8RHv
+        BAABbQj3AUMB9wgAAfYBegrlAVkCOAF6BQAB8Qj/AfQC8QH/GwAK9AkAAfYOmgEaBQAB8wfyAvEB8gH/
+        aQABQgFNAT4HAAE+AwABKAMAAVADAAEoAwABAQEAAQEFAAHgAQEWAAP/AQAF/wcAAcABAAE/Av8HAAHA
+        AQABPwL/BwABwAEAATgBAAEBBwABwAEAATgBAAEBBwABwAEAATgBAAEBBwABwAEAATgBAAEBBwABwAEA
+        ATgBAAEBBwABwAEAATgBAAEBBwABwAEAATgBAAEBBwABwAEAATgBAAEBBwABwAEAATgBAAEBBwABwAEA
+        ATgBAAEBBwABwAEAATgBAAEBBwABwAEAATgBAAEBBwABwAEAATgBAAEBBwABwAEAATgBAAEBBwABwAEA
+        AT8C/wcAAcABAAE/Av8HAAX/BwAK/wIAAeABAAH8AQABBwHgAQABfwL/AgAB4AEAAXwBAAEHAeABAAF/
+        Av8CAAHgAQABfAEAAQcB4AEAAXgBAAEBAgAB4AEAAXwBAAEHAeABAAF4AQABAQIAAeABAAF8AQABBwHg
+        AQABeAEAAQECAAHgAQABfAEAAQcB4AEAAXgBAAEBAgAB4AEAAXwBAAEHAeABAAF4AQABAQIAAeABAAF8
+        AQABBwHgAQABeAEAAQECAAHgAQABfAEAAQcB4AEAAXgBAAEBAgAB4AEAAXwBAAEDAeABAAF4AQABAQIA
+        AeABAAF8AQABAwHgAQABeAEAAQECAAHgAQABfAEAAQMB4AEAAXgBAAEBAgAB4AEAAXwBAAEDAeABAAF4
+        AQABAQIAAeABAAF8AQABAwHgAQABeAEAAQECAAHgAQAB/AEAAQMB4AEAAXgBAAEBAgAB4AEBAfwBAAED
+        AeABAAF4AQABAQIAAeABAwH8AQABAwHgAQAD/wIAAeABBwH8AQABAwHgAQED/wIACv8CAAs=
 </value>
   </data>
   <data name="treeView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 28</value>
   </data>
   <data name="treeView.SelectedImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="treeView.Size" type="System.Drawing.Size, System.Drawing">
     <value>415, 631</value>
@@ -420,17 +440,194 @@
   <data name="&gt;&gt;treeTabPage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="restorePathCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="restorePathCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.25pt</value>
+  </data>
+  <data name="restorePathCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 36</value>
+  </data>
+  <data name="restorePathCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 26</value>
+  </data>
+  <data name="restorePathCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="restorePathCheckBox.Text" xml:space="preserve">
+    <value>Restore Path On Start-Up</value>
+  </data>
+  <data name="&gt;&gt;restorePathCheckBox.Name" xml:space="preserve">
+    <value>restorePathCheckBox</value>
+  </data>
+  <data name="&gt;&gt;restorePathCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;restorePathCheckBox.Parent" xml:space="preserve">
+    <value>PathSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;restorePathCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="startupPathTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="startupPathTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="startupPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 92</value>
+  </data>
+  <data name="startupPathTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>386, 37</value>
+  </data>
+  <data name="startupPathTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;startupPathTextBox.Name" xml:space="preserve">
+    <value>startupPathTextBox</value>
+  </data>
+  <data name="&gt;&gt;startupPathTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startupPathTextBox.Parent" xml:space="preserve">
+    <value>PathSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;startupPathTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="startupPathLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="startupPathLabel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="startupPathLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.25pt</value>
+  </data>
+  <data name="startupPathLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="startupPathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 67</value>
+  </data>
+  <data name="startupPathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 22</value>
+  </data>
+  <data name="startupPathLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="startupPathLabel.Text" xml:space="preserve">
+    <value>Startup Path</value>
+  </data>
+  <data name="&gt;&gt;startupPathLabel.Name" xml:space="preserve">
+    <value>startupPathLabel</value>
+  </data>
+  <data name="&gt;&gt;startupPathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startupPathLabel.Parent" xml:space="preserve">
+    <value>PathSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;startupPathLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PathSettingsGroupBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 18pt, style=Bold</value>
+  </data>
+  <data name="PathSettingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="PathSettingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>406, 146</value>
+  </data>
+  <data name="PathSettingsGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="PathSettingsGroupBox.Text" xml:space="preserve">
+    <value>Path Settings</value>
+  </data>
+  <data name="&gt;&gt;PathSettingsGroupBox.Name" xml:space="preserve">
+    <value>PathSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;PathSettingsGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PathSettingsGroupBox.Parent" xml:space="preserve">
+    <value>settingsTabPage</value>
+  </data>
+  <data name="&gt;&gt;PathSettingsGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="MaxTreeNodesLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MaxTreeNodesLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.25pt</value>
+  </data>
+  <data name="MaxTreeNodesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MaxTreeNodesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 46</value>
+  </data>
+  <data name="MaxTreeNodesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="MaxTreeNodesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="MaxTreeNodesLabel.Text" xml:space="preserve">
+    <value>Max Tree Nodes</value>
+  </data>
+  <data name="&gt;&gt;MaxTreeNodesLabel.Name" xml:space="preserve">
+    <value>MaxTreeNodesLabel</value>
+  </data>
+  <data name="&gt;&gt;MaxTreeNodesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MaxTreeNodesLabel.Parent" xml:space="preserve">
+    <value>TreeSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;MaxTreeNodesLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 71</value>
+  </data>
+  <data name="numericUpDown1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 37</value>
+  </data>
+  <data name="numericUpDown1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown1.Name" xml:space="preserve">
+    <value>numericUpDown1</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown1.Parent" xml:space="preserve">
+    <value>TreeSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="iconSetLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="iconSetLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.25pt</value>
   </data>
   <data name="iconSetLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="iconSetLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 136</value>
+    <value>7, 121</value>
   </data>
   <data name="iconSetLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 17</value>
+    <value>81, 22</value>
   </data>
   <data name="iconSetLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -445,10 +642,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;iconSetLabel.Parent" xml:space="preserve">
-    <value>settingsTabPage</value>
+    <value>TreeSettingsGroupBox</value>
   </data>
   <data name="&gt;&gt;iconSetLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="iconSetComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -474,11 +671,8 @@
   <data name="iconSetComboBox.Items5" xml:space="preserve">
     <value>Mac 12.5</value>
   </data>
-  <data name="iconSetComboBox.Items6" xml:space="preserve">
-    <value>Icons8 (https://icons8.com/)</value>
-  </data>
   <data name="iconSetComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 167</value>
+    <value>11, 146</value>
   </data>
   <data name="iconSetComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 25</value>
@@ -493,160 +687,37 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;iconSetComboBox.Parent" xml:space="preserve">
-    <value>settingsTabPage</value>
+    <value>TreeSettingsGroupBox</value>
   </data>
   <data name="&gt;&gt;iconSetComboBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="iconSettingsLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="iconSettingsLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 11.25pt, style=Bold</value>
-  </data>
-  <data name="iconSettingsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="iconSettingsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 112</value>
-  </data>
-  <data name="iconSettingsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 19</value>
-  </data>
-  <data name="iconSettingsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="iconSettingsLabel.Text" xml:space="preserve">
-    <value>Icon Settings</value>
-  </data>
-  <data name="&gt;&gt;iconSettingsLabel.Name" xml:space="preserve">
-    <value>iconSettingsLabel</value>
-  </data>
-  <data name="&gt;&gt;iconSettingsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;iconSettingsLabel.Parent" xml:space="preserve">
-    <value>settingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;iconSettingsLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="startupPathLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="startupPathLabel.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="startupPathLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="startupPathLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 52</value>
-  </data>
-  <data name="startupPathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 17</value>
-  </data>
-  <data name="startupPathLabel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="startupPathLabel.Text" xml:space="preserve">
-    <value>Startup Path</value>
+  <data name="TreeSettingsGroupBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 18pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;startupPathLabel.Name" xml:space="preserve">
-    <value>startupPathLabel</value>
+  <data name="TreeSettingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 151</value>
   </data>
-  <data name="&gt;&gt;startupPathLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TreeSettingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>406, 254</value>
   </data>
-  <data name="&gt;&gt;startupPathLabel.Parent" xml:space="preserve">
+  <data name="TreeSettingsGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="TreeSettingsGroupBox.Text" xml:space="preserve">
+    <value>Tree Settings</value>
+  </data>
+  <data name="&gt;&gt;TreeSettingsGroupBox.Name" xml:space="preserve">
+    <value>TreeSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;TreeSettingsGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TreeSettingsGroupBox.Parent" xml:space="preserve">
     <value>settingsTabPage</value>
   </data>
-  <data name="&gt;&gt;startupPathLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="startupPathTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left</value>
-  </data>
-  <data name="startupPathTextBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="startupPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 71</value>
-  </data>
-  <data name="startupPathTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>386, 23</value>
-  </data>
-  <data name="startupPathTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;startupPathTextBox.Name" xml:space="preserve">
-    <value>startupPathTextBox</value>
-  </data>
-  <data name="&gt;&gt;startupPathTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startupPathTextBox.Parent" xml:space="preserve">
-    <value>settingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;startupPathTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="restorePathCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="restorePathCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 28</value>
-  </data>
-  <data name="restorePathCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 21</value>
-  </data>
-  <data name="restorePathCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;TreeSettingsGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="restorePathCheckBox.Text" xml:space="preserve">
-    <value>Restore Path On Start-Up</value>
-  </data>
-  <data name="&gt;&gt;restorePathCheckBox.Name" xml:space="preserve">
-    <value>restorePathCheckBox</value>
-  </data>
-  <data name="&gt;&gt;restorePathCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;restorePathCheckBox.Parent" xml:space="preserve">
-    <value>settingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;restorePathCheckBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="pathSettingsLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pathSettingsLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 11.25pt, style=Bold</value>
-  </data>
-  <data name="pathSettingsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 4</value>
-  </data>
-  <data name="pathSettingsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 19</value>
-  </data>
-  <data name="pathSettingsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="pathSettingsLabel.Text" xml:space="preserve">
-    <value>Path Settings</value>
-  </data>
-  <data name="&gt;&gt;pathSettingsLabel.Name" xml:space="preserve">
-    <value>pathSettingsLabel</value>
-  </data>
-  <data name="&gt;&gt;pathSettingsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pathSettingsLabel.Parent" xml:space="preserve">
-    <value>settingsTabPage</value>
-  </data>
-  <data name="&gt;&gt;pathSettingsLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="settingsTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 26</value>
@@ -722,6 +793,9 @@
   </data>
   <data name="imageViewerRictureBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
+  </data>
+  <data name="imageViewerRictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="imageViewerRictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>

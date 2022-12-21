@@ -44,13 +44,15 @@
             this.pathTextBox = new System.Windows.Forms.TextBox();
             this.browseButton = new System.Windows.Forms.Button();
             this.settingsTabPage = new System.Windows.Forms.TabPage();
+            this.PathSettingsGroupBox = new System.Windows.Forms.GroupBox();
+            this.restorePathCheckBox = new System.Windows.Forms.CheckBox();
+            this.startupPathTextBox = new System.Windows.Forms.TextBox();
+            this.startupPathLabel = new System.Windows.Forms.Label();
+            this.TreeSettingsGroupBox = new System.Windows.Forms.GroupBox();
+            this.MaxTreeNodesLabel = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.iconSetLabel = new System.Windows.Forms.Label();
             this.iconSetComboBox = new System.Windows.Forms.ComboBox();
-            this.iconSettingsLabel = new System.Windows.Forms.Label();
-            this.startupPathLabel = new System.Windows.Forms.Label();
-            this.startupPathTextBox = new System.Windows.Forms.TextBox();
-            this.restorePathCheckBox = new System.Windows.Forms.CheckBox();
-            this.pathSettingsLabel = new System.Windows.Forms.Label();
             this.rightTabControl = new System.Windows.Forms.TabControl();
             this.imageViewerTabPage = new System.Windows.Forms.TabPage();
             this.imageViewerRictureBox = new System.Windows.Forms.PictureBox();
@@ -72,6 +74,9 @@
             this.treeTabPage.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.settingsTabPage.SuspendLayout();
+            this.PathSettingsGroupBox.SuspendLayout();
+            this.TreeSettingsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.rightTabControl.SuspendLayout();
             this.imageViewerTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageViewerRictureBox)).BeginInit();
@@ -137,6 +142,7 @@
             this.treeView.ContextMenuStrip = this.contextMenuStrip1;
             this.treeView.HideSelection = false;
             this.treeView.ImageList = this.treeViewImageList;
+            this.treeView.ItemHeight = 25;
             this.treeView.Name = "treeView";
             this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.treeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseClick_1);
@@ -166,11 +172,12 @@
             // 
             this.treeViewImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("treeViewImageList.ImageStream")));
             this.treeViewImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.treeViewImageList.Images.SetKeyName(0, "icons8-folder-100.png");
-            this.treeViewImageList.Images.SetKeyName(1, "icons8-document-100.png");
-            this.treeViewImageList.Images.SetKeyName(2, "icons8-image-100.png");
-            this.treeViewImageList.Images.SetKeyName(3, "icons8-video-100.png");
-            this.treeViewImageList.Images.SetKeyName(4, "icons8-paint-net-100.png");
+            this.treeViewImageList.Images.SetKeyName(0, "UnknownFile.png");
+            this.treeViewImageList.Images.SetKeyName(1, "imageres_3.ico");
+            this.treeViewImageList.Images.SetKeyName(2, "imageres_102.ico");
+            this.treeViewImageList.Images.SetKeyName(3, "imageres_21.ico");
+            this.treeViewImageList.Images.SetKeyName(4, "imageres_23.ico");
+            this.treeViewImageList.Images.SetKeyName(5, "imageres_15.ico");
             // 
             // pathTextBox
             // 
@@ -188,16 +195,66 @@
             // 
             // settingsTabPage
             // 
-            this.settingsTabPage.Controls.Add(this.iconSetLabel);
-            this.settingsTabPage.Controls.Add(this.iconSetComboBox);
-            this.settingsTabPage.Controls.Add(this.iconSettingsLabel);
-            this.settingsTabPage.Controls.Add(this.startupPathLabel);
-            this.settingsTabPage.Controls.Add(this.startupPathTextBox);
-            this.settingsTabPage.Controls.Add(this.restorePathCheckBox);
-            this.settingsTabPage.Controls.Add(this.pathSettingsLabel);
+            this.settingsTabPage.Controls.Add(this.PathSettingsGroupBox);
+            this.settingsTabPage.Controls.Add(this.TreeSettingsGroupBox);
             resources.ApplyResources(this.settingsTabPage, "settingsTabPage");
             this.settingsTabPage.Name = "settingsTabPage";
             this.settingsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // PathSettingsGroupBox
+            // 
+            this.PathSettingsGroupBox.Controls.Add(this.restorePathCheckBox);
+            this.PathSettingsGroupBox.Controls.Add(this.startupPathTextBox);
+            this.PathSettingsGroupBox.Controls.Add(this.startupPathLabel);
+            resources.ApplyResources(this.PathSettingsGroupBox, "PathSettingsGroupBox");
+            this.PathSettingsGroupBox.Name = "PathSettingsGroupBox";
+            this.PathSettingsGroupBox.TabStop = false;
+            // 
+            // restorePathCheckBox
+            // 
+            resources.ApplyResources(this.restorePathCheckBox, "restorePathCheckBox");
+            this.restorePathCheckBox.Checked = true;
+            this.restorePathCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.restorePathCheckBox.Name = "restorePathCheckBox";
+            this.restorePathCheckBox.UseVisualStyleBackColor = true;
+            this.restorePathCheckBox.CheckedChanged += new System.EventHandler(this.rememberPathCheckBox_CheckedChanged);
+            // 
+            // startupPathTextBox
+            // 
+            resources.ApplyResources(this.startupPathTextBox, "startupPathTextBox");
+            this.startupPathTextBox.Name = "startupPathTextBox";
+            this.startupPathTextBox.TextChanged += new System.EventHandler(this.startupPathTextBox_TextChanged);
+            this.startupPathTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.startupPathTextBox_KeyPress);
+            // 
+            // startupPathLabel
+            // 
+            resources.ApplyResources(this.startupPathLabel, "startupPathLabel");
+            this.startupPathLabel.Name = "startupPathLabel";
+            // 
+            // TreeSettingsGroupBox
+            // 
+            this.TreeSettingsGroupBox.Controls.Add(this.MaxTreeNodesLabel);
+            this.TreeSettingsGroupBox.Controls.Add(this.numericUpDown1);
+            this.TreeSettingsGroupBox.Controls.Add(this.iconSetLabel);
+            this.TreeSettingsGroupBox.Controls.Add(this.iconSetComboBox);
+            resources.ApplyResources(this.TreeSettingsGroupBox, "TreeSettingsGroupBox");
+            this.TreeSettingsGroupBox.Name = "TreeSettingsGroupBox";
+            this.TreeSettingsGroupBox.TabStop = false;
+            // 
+            // MaxTreeNodesLabel
+            // 
+            resources.ApplyResources(this.MaxTreeNodesLabel, "MaxTreeNodesLabel");
+            this.MaxTreeNodesLabel.Name = "MaxTreeNodesLabel";
+            // 
+            // numericUpDown1
+            // 
+            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // iconSetLabel
             // 
@@ -215,40 +272,8 @@
             resources.GetString("iconSetComboBox.Items2"),
             resources.GetString("iconSetComboBox.Items3"),
             resources.GetString("iconSetComboBox.Items4"),
-            resources.GetString("iconSetComboBox.Items5"),
-            resources.GetString("iconSetComboBox.Items6")});
+            resources.GetString("iconSetComboBox.Items5")});
             this.iconSetComboBox.Name = "iconSetComboBox";
-            // 
-            // iconSettingsLabel
-            // 
-            resources.ApplyResources(this.iconSettingsLabel, "iconSettingsLabel");
-            this.iconSettingsLabel.Name = "iconSettingsLabel";
-            // 
-            // startupPathLabel
-            // 
-            resources.ApplyResources(this.startupPathLabel, "startupPathLabel");
-            this.startupPathLabel.Name = "startupPathLabel";
-            // 
-            // startupPathTextBox
-            // 
-            resources.ApplyResources(this.startupPathTextBox, "startupPathTextBox");
-            this.startupPathTextBox.Name = "startupPathTextBox";
-            this.startupPathTextBox.TextChanged += new System.EventHandler(this.startupPathTextBox_TextChanged);
-            this.startupPathTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.startupPathTextBox_KeyPress);
-            // 
-            // restorePathCheckBox
-            // 
-            resources.ApplyResources(this.restorePathCheckBox, "restorePathCheckBox");
-            this.restorePathCheckBox.Checked = true;
-            this.restorePathCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.restorePathCheckBox.Name = "restorePathCheckBox";
-            this.restorePathCheckBox.UseVisualStyleBackColor = true;
-            this.restorePathCheckBox.CheckedChanged += new System.EventHandler(this.rememberPathCheckBox_CheckedChanged);
-            // 
-            // pathSettingsLabel
-            // 
-            resources.ApplyResources(this.pathSettingsLabel, "pathSettingsLabel");
-            this.pathSettingsLabel.Name = "pathSettingsLabel";
             // 
             // rightTabControl
             // 
@@ -339,7 +364,11 @@
             this.treeTabPage.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.settingsTabPage.ResumeLayout(false);
-            this.settingsTabPage.PerformLayout();
+            this.PathSettingsGroupBox.ResumeLayout(false);
+            this.PathSettingsGroupBox.PerformLayout();
+            this.TreeSettingsGroupBox.ResumeLayout(false);
+            this.TreeSettingsGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.rightTabControl.ResumeLayout(false);
             this.imageViewerTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageViewerRictureBox)).EndInit();
@@ -372,7 +401,6 @@
         private System.Windows.Forms.ToolStripMenuItem openExternallyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
         private System.Windows.Forms.CheckBox restorePathCheckBox;
-        private System.Windows.Forms.Label pathSettingsLabel;
         private System.Windows.Forms.Label startupPathLabel;
         private System.Windows.Forms.TextBox startupPathTextBox;
         private System.Windows.Forms.ImageList treeViewImageList;
@@ -381,9 +409,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label iconSetLabel;
         private System.Windows.Forms.ComboBox iconSetComboBox;
-        private System.Windows.Forms.Label iconSettingsLabel;
         private System.Windows.Forms.Label folderCountLabel;
         private System.Windows.Forms.Label fileCountLabel;
+        private System.Windows.Forms.GroupBox TreeSettingsGroupBox;
+        private System.Windows.Forms.GroupBox PathSettingsGroupBox;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label MaxTreeNodesLabel;
     }
 }
 

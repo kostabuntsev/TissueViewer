@@ -21,7 +21,9 @@ namespace TissueViewer
         public MainForm()
         {
             InitializeComponent();
-            
+
+            iconSetComboBox.SelectedIndex = 0;
+
             //load Folder structure
             imageViewerRictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -62,17 +64,20 @@ namespace TissueViewer
         {
             var directoryNode = new TreeNode(directoryInfo.Name);
             directoryNode.Tag = new TreeNodeMetadata(FSItem.Directory, directoryInfo.FullName, null);
-            //directoryNode.Tag 
             foreach (var directory in directoryInfo.GetDirectories())
             {
+
                 var createdDir = CreateDirectoryNode(directory);
 
                 directoryNode.Nodes.Add(createdDir);
                 folderCount++;
-                folderCountLabel.Text = folderCount.ToString() + " Folders";
+                folderCountLabel.Text = folderCount.ToString() + " Folders Loaded";
 
-                createdDir.ImageIndex = 0;
-                createdDir.SelectedImageIndex = createdDir.ImageIndex;
+                if (iconSetComboBox.SelectedIndex == 0)
+                {
+                    createdDir.ImageIndex = 1;
+                    createdDir.SelectedImageIndex = 1;
+                }
             }
 
             foreach (FileInfo file in directoryInfo.GetFiles())
@@ -81,24 +86,127 @@ namespace TissueViewer
                 fileNode.Tag = new TreeNodeMetadata(FSItem.File, file.FullName, file.Extension);
                 directoryNode.Nodes.Add(fileNode);
                 fileCount++;
-                fileCountLabel.Text = fileCount.ToString() + " Files";
+                fileCountLabel.Text = fileCount.ToString() + " Files Loaded";
 
-                if(file.Extension == ".txt")
+                if (iconSetComboBox.SelectedIndex == 0)
                 {
-                    fileNode.ImageIndex = 1;
+                    if (file.Extension == ".txt")
+                    {
+                        fileNode.ImageIndex = 2;
+                    }
+                    else if (file.Extension == ".png" || file.Extension == ".jpg" || file.Extension == "jepg")
+                    {
+                        fileNode.ImageIndex = 3;
+                    }
+                    else if (file.Extension == ".gif" || file.Extension == ".mp4" || file.Extension == ".mkv")
+                    {
+                        fileNode.ImageIndex = 4;
+                    }
+                    else if (file.Extension == ".exe")
+                    {
+                        fileNode.ImageIndex = 5;
+                    }
+                    else
+                    {
+                        fileNode.ImageIndex = 0;
+                    }
                 }
-                else if(file.Extension == ".png" || file.Extension == ".jpg" || file.Extension == "jepg")
+                else if (iconSetComboBox.SelectedIndex == 1)
                 {
-                    fileNode.ImageIndex = 2;
+                    if (file.Extension == ".txt")
+                    {
+                        fileNode.ImageIndex = 1;
+                    }
+                    else if (file.Extension == ".png" || file.Extension == ".jpg" || file.Extension == "jepg")
+                    {
+                        fileNode.ImageIndex = 2;
+                    }
+                    else if (file.Extension == ".gif" || file.Extension == ".mp4" || file.Extension == ".mkv")
+                    {
+                        fileNode.ImageIndex = 3;
+                    }
+                    else if (file.Extension == ".exe")
+                    {
+                        fileNode.ImageIndex = 4;
+                    }
                 }
-                else if (file.Extension == ".gif" || file.Extension == ".mp4" || file.Extension == ".mkv")
+                else if (iconSetComboBox.SelectedIndex == 3)
                 {
-                    fileNode.ImageIndex = 3;
+                    if (file.Extension == ".txt")
+                    {
+                        fileNode.ImageIndex = 1;
+                    }
+                    else if (file.Extension == ".png" || file.Extension == ".jpg" || file.Extension == "jepg")
+                    {
+                        fileNode.ImageIndex = 2;
+                    }
+                    else if (file.Extension == ".gif" || file.Extension == ".mp4" || file.Extension == ".mkv")
+                    {
+                        fileNode.ImageIndex = 3;
+                    }
+                    else if (file.Extension == ".exe")
+                    {
+                        fileNode.ImageIndex = 4;
+                    }
                 }
-                else if(file.Extension == ".exe")
+                else if (iconSetComboBox.SelectedIndex == 4)
                 {
-                    fileNode.ImageIndex = 4;
+                    if (file.Extension == ".txt")
+                    {
+                        fileNode.ImageIndex = 1;
+                    }
+                    else if (file.Extension == ".png" || file.Extension == ".jpg" || file.Extension == "jepg")
+                    {
+                        fileNode.ImageIndex = 2;
+                    }
+                    else if (file.Extension == ".gif" || file.Extension == ".mp4" || file.Extension == ".mkv")
+                    {
+                        fileNode.ImageIndex = 3;
+                    }
+                    else if (file.Extension == ".exe")
+                    {
+                        fileNode.ImageIndex = 4;
+                    }
                 }
+                else if (iconSetComboBox.SelectedIndex == 5)
+                {
+                    if (file.Extension == ".txt")
+                    {
+                        fileNode.ImageIndex = 1;
+                    }
+                    else if (file.Extension == ".png" || file.Extension == ".jpg" || file.Extension == "jepg")
+                    {
+                        fileNode.ImageIndex = 2;
+                    }
+                    else if (file.Extension == ".gif" || file.Extension == ".mp4" || file.Extension == ".mkv")
+                    {
+                        fileNode.ImageIndex = 3;
+                    }
+                    else if (file.Extension == ".exe")
+                    {
+                        fileNode.ImageIndex = 4;
+                    }
+                }
+                else if (iconSetComboBox.SelectedIndex == 6)
+                {
+                    if (file.Extension == ".txt")
+                    {
+                        fileNode.ImageIndex = 1;
+                    }
+                    else if (file.Extension == ".png" || file.Extension == ".jpg" || file.Extension == "jepg")
+                    {
+                        fileNode.ImageIndex = 2;
+                    }
+                    else if (file.Extension == ".gif" || file.Extension == ".mp4" || file.Extension == ".mkv")
+                    {
+                        fileNode.ImageIndex = 3;
+                    }
+                    else if (file.Extension == ".exe")
+                    {
+                        fileNode.ImageIndex = 4;
+                    }
+                }
+
 
                 fileNode.SelectedImageIndex = fileNode.ImageIndex;
 
@@ -114,10 +222,14 @@ namespace TissueViewer
             return directoryNode;
         }
 
+
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (!isDirectory(treeView.SelectedNode))
             {
+                openExternallyButton.Enabled = true;
+
+
                 TreeNode selectedNode = treeView.SelectedNode;
                 var metadata = (selectedNode.Tag as TreeNodeMetadata);
                 string filePath = metadata.FullName;
@@ -137,7 +249,10 @@ namespace TissueViewer
                         textEditorRichTextBox.Text = reader.ReadToEnd();
                     }
                 }
-
+            }
+            else
+            {
+                openExternallyButton.Enabled = false;
             }
         }
 
